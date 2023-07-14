@@ -14,11 +14,15 @@ ll y(int a, int n){
 	return 2*x(a, n - 1) + y(a, n - 1);
 }
 
+ll f(int a, int n){
+	return x(a, n) + y(a, n);
+}
+
 int main()
 {
 	//ĐỆ QUY
 	int n, a;
 	cin >> n >> a;
-	cout << x(a, n) + y(a, n);
+	cout << f(a, n);
 	return 0;
 }
