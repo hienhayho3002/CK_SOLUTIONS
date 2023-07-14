@@ -18,6 +18,7 @@ ll f(int a, int n){
 
 int main()
 {
+	// Khử đệ quy bằng vòng lặp
 	int n, a;
 	cin >> n >> a;
 	cout << f(a, n);
