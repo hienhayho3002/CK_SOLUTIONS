@@ -16,6 +16,7 @@ ll y(int a, int n){
 
 int main()
 {
+	//ĐỆ QUY
 	int n, a;
 	cin >> n >> a;
 	cout << x(a, n) + y(a, n);
