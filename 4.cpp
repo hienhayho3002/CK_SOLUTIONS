@@ -8,6 +8,17 @@ double calc(int n){
 	return sqrt(n + calc(n - 1));
 }
 
+double calc_2(int n){
+	int i = 1;
+	double s = 0;
+	while (i <= n)
+	{
+		s = sqrt(s + i);
+		i++;
+	}
+	return s;
+}
+
 int main()
 {
 	int n;
