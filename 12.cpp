@@ -22,22 +22,22 @@ void solve(){
     int a[n];
     for (int i = 0; i < n; ++i) cin >> a[i];
     sort(a, a + n);
-	  ll s = 0;
-	  int l = 0, r = n - 1;
-  	ll MAX = 0;
-  	while(l < r){
-  		s = a[l] + a[r];
-  		if (s == x){
-  			MAX = x;
-  			break;
-  		}
-  		else if (s < x){
-  			MAX = max(MAX, s);
-  			l++;
-  		}
-  		else r--;
-  	}
-  	cout << MAX;
+	ll s = 0;
+	int l = 0, r = n - 1;
+	ll MAX = 0;
+	while(l < r){
+		s = a[l] + a[r];
+		if (s == x){
+			MAX = x;
+			break;
+		}
+		else if (s < x){
+			MAX = max(MAX, s);
+			l++;
+		}
+		else r--;
+	}
+	cout << MAX;
 }
 
 
