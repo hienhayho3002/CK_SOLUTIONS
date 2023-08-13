@@ -16,7 +16,7 @@ typedef pair<int, int> pii;
 #define eb emplace_back
 #define endl '\n'
 
-// Quy hoạch động - Dynamic Programming
+// Quy hoạch động - Dynamic Programming -> ĐPT O(N)
 void solve(){
     int n;
     cin >> n;
