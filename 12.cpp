@@ -16,39 +16,41 @@ typedef pair<int, int> pii;
 #define eb emplace_back
 #define endl '\n'
 
+// Kỹ thuật hai con trỏ - Two pointers -> ĐPT O(N)
 void solve(){
     int n, x;
     cin >> n >> x;
     int a[n];
-    for (int i = 0; i < n; ++i) cin >> a[i];
+    for (int i = 0; i < n; ++i) 
+        cin >> a[i];
     sort(a, a + n);
-	ll s = 0;
-	int l = 0, r = n - 1;
-	ll MAX = 0;
-	while(l < r){
-		s = a[l] + a[r];
-		if (s == x){
-			MAX = x;
-			break;
-		}
-		else if (s < x){
-			MAX = max(MAX, s);
-			l++;
-		}
-		else r--;
-	}
-	cout << MAX;
+    ll s = 0;
+    int l = 0, r = n - 1;
+    ll MAX = 0;
+    while(l < r){
+        s = a[l] + a[r];
+        if (s == x){
+            MAX = x;
+            break;
+        }
+        else if (s < x){
+            MAX = max(MAX, s);
+            l++;
+        }
+        else r--;
+    }
+    cout << MAX;
 }
 
 
 int main()
 {
-	//srand(time(NULL));
+    //srand(time(NULL));
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif
-	
+    
     ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
     
     //int t; cin >> t; for (int i = 1; i <= t; ++i)
