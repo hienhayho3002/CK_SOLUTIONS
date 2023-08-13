@@ -20,10 +20,10 @@ ll a[10005];
 
 
 // Quay lui - Backtracking -> ĐPT O(2^N)
-ll Try(int n){
-    if (n == 0) return 0;
-    if (n == 1) return a[1];
-    return max(Try(n - 1), Try(n - 2) + a[n]);
+ll Try(int i){
+    if (i == 0) return 0;
+    if (i == 1) return a[1];
+    return max(Try(i - 1), Try(i - 2) + a[i]);
 }
 
 void solve(){
