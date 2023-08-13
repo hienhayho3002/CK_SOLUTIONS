@@ -28,7 +28,7 @@ void solve(){
     ll an = 0, d = 0;
     int i = 1;
     while(l <= r){
-        if (i & 1){
+        if (i & 1){ // i%2 == 1
             if(a[l] >= a[r]){
                 an += a[l];
                 l++;
