@@ -18,7 +18,7 @@ typedef pair<int, int> pii;
 
 const int maxN = 105;
 const int maxX = 1e6 + 5;
-//vector<int> dp(maxX, INT_MAX);
+//vector<int> dp(maxX, 1e9);
 int dp[maxX];
 int n, x;
 int a[105];
