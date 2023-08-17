@@ -22,20 +22,24 @@ void solve(){
     ll a[n + 1];
     for (int i = 1; i <= n; ++i)
         cin >> a[i];
-    ll l[n + 1], r[n + 1];
+    ll l[n + 1], r[n + 1]; //l[i] = max(a[1],...,a[l]), r[i] = max(a[i + 1], a[n])
     l[1] = a[1];
     r[n] = 0;
-    for (int i = 2; i <= n; ++i){
-        l[i] = max(a[i], l[i - 1]);
+    for (int i = 2; i < n; ++i){
+        l[i] = max(l[i - 1], a[i]);
     }
     for (int i = n - 1; i >= 1; --i){
-        r[i] = max(a[i + 1], r[i + 1]);
+        r[i] = max(r[i + 1], a[i + 1]);
     }
     ll MAX = 0;
+    int k = 0;
     for (int i = 1; i <= n - 1; ++i){
-        MAX = max(MAX, l[i]*r[i]);
+        if (MAX < l[i]*r[i]){
+            MAX = l[i]*r[i];
+            k = i;
+        }
     }
-    cout << MAX;
+    cout << MAX << " " << k;
 }
 
 
